@@ -1,0 +1,79 @@
+.taskWrapper {
+  background-color: #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.taskWrapper:hover .deleteItem {
+  background: linear-gradient(#d46767, rgba(204, 204, 204, 0) 30%);
+  opacity: 1;
+}
+
+.taskHeading {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.taskDescription {
+  font-size: 16px;
+}
+
+.checkbox {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.completed {
+  position: relative;
+  top: 30px;
+  display: block;
+  text-align: center;
+  font-size: 10px;
+}
+
+.deleteItem {
+  display: flex;
+  font-size: 7px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.taskWrapper .taskDescription .deleteItem:hover {
+  background: linear-gradient(#d46767, #d46767);
+}
+
+.deleteItem::after {
+  content: "delete";
+  position: relative;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.deleteItem:hover::after {
+  content: "delete";
+  opacity: 1;
+}
+
+.selected {
+  background-color: #caf8c173;
+  box-shadow: none;
+  border-top: 1px solid #00000021;
+  border-left: 1px solid #00000021;
+  border-right: 1px solid #00000021;
+  border-bottom: 1px solid #00000021;
+}
